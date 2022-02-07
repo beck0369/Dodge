@@ -53,9 +53,10 @@
     <UnityVersion>2020.3.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\Bullet.cs" />
-    <Compile Include="Assets\BulletSpawner.cs" />
+    <Compile Include="Assets\02_Scripts\BulletSpawner.cs" />
+    <Compile Include="Assets\02_Scripts\PlayerController.cs" />
+    <Compile Include="Assets\02_Scripts\Bullet.cs" />
+    <Compile Include="Assets\02_Scripts\Rotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
