@@ -19,5 +19,25 @@ public class GameManager : MonoBehaviour
         isGameover = false; // 생존 시간과 게임오버 상태 초기화
     }
 
+    private void Update()
+    {
+        if (!isGameover)    // 게임오버가 아닌 동안
+        {
+            surviveTime += Time.deltaTime;  // 생존 시간 갱신
+            timeText.text = "Time : " + (int)surviveTime;   // 갱신한 생존 시간을 timeText 텍스트 컴포넌트를 이용해 표시
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.R))    // 게임오버 상태에서 R 키를 누른 경우
+            {
+                SceneManager.LoadScene("SampleScene");  // SampleScene 씬을 로드
+            }
+        }
+    }
 
+    public void EndGame()
+    {
+        isGameover = true;  // 현재 상태를 게임오버 상태로 전환
+        gameOverText.SetActive(true);   // 게임오버 텍스트 게임 오브젝트를 활성화
+    }
 }
